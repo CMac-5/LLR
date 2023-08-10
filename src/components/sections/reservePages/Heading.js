@@ -8,7 +8,7 @@ export default function Heading() {
         alt="Little Lemon Ingredients"
       ></img>
       <div className="reserve-header-text">
-        <h1>Reserve a table</h1>
+        <h1>Reservations</h1>
       </div>
     </header>
   );
