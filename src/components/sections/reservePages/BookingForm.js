@@ -84,11 +84,11 @@ export default function ReservationForm(props) {
       </div>
 
       <div>
-        <label htmlFor="people">Number of People</label> <br></br>
+        <label htmlFor="people">Number of Guests</label> <br></br>
         <input
           type="number"
           id="people"
-          placeholder="Number of People"
+          placeholder="Number of Guests"
           value={people}
           required
           min={1}
@@ -138,19 +138,19 @@ export default function ReservationForm(props) {
           onChange={(e) => setPreferences(e.target.value)}
         >
           <option>None</option>
-          <option>Indoors</option>
-          <option>Outdoor (Patio)</option>
-          <option>Outdoor (Sidewalk)</option>
+          <option>Indoors (Upstairs)</option>
+          <option>Indoors (Downstairs)</option>
+          <option>Patio</option>
         </select>
       </div>
 
       <div>
-        <label htmlFor="comments">Additional Comments</label> <br></br>
+        <label htmlFor="comments">Additional Instructions</label> <br></br>
         <textarea
           id="comments"
           rows={8}
           cols={50}
-          placeholder="Additional Comments"
+          placeholder="Additional Instructions"
           value={comments}
           onChange={(e) => setComments(e.target.value)}
         ></textarea>
@@ -158,14 +158,8 @@ export default function ReservationForm(props) {
 
       <div>
         <br></br>
-        <small>
-          <p>
-            Note: You cannot edit your reservation after submission. Please
-            double-check your answer before submitting your reservation request.
-          </p>
-        </small>
-        <Link className="action-button" to="/confirmation">
-          Book Table
+          <Link className="action-button" to="/confirmation">
+          Confirm Reservation
         </Link>
       </div>
     </form>
